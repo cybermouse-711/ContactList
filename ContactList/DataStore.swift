@@ -7,16 +7,16 @@
 
 class DataStore {
     
-    let name: Set<String>
-    let surname: Set<String>
-    let number: Set<String>
-    let email: Set<String>
+    let name: [String]
+    let surname: [String]
+    let number: [String]
+    let email: [String]
     
     init(
-        name: Set<String>,
-        surname: Set<String>,
-        number: Set<String>,
-        email: Set<String>
+        name: [String],
+        surname: [String],
+        number: [String],
+        email: [String]
     ) {
         self.name = name
         self.surname = surname
