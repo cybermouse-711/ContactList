@@ -12,18 +12,12 @@ class InfoContactViewController: UIViewController {
     @IBOutlet var numberPerson: UILabel!
     @IBOutlet var emailPerson: UILabel!
     
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        title = person.fullName
+        numberPerson.text = person.number
+        emailPerson.text = person.email
     }
-    
-
-
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
-    }
-
-
 }
