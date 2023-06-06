@@ -84,8 +84,8 @@
 		C69B92E62A2E896A00252729 /* ViewControlers */ = {
 			isa = PBXGroup;
 			children = (
-				C69B92DF2A2E69DD00252729 /* InfoContactViewController.swift */,
 				C69B92DD2A2E676A00252729 /* ContactListViewController.swift */,
+				C69B92DF2A2E69DD00252729 /* InfoContactViewController.swift */,
 			);
 			path = ViewControlers;
 			sourceTree = "<group>";
@@ -93,8 +93,8 @@
 		C69B92E72A2E898300252729 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C69B92E32A2E75B900252729 /* Person.swift */,
 				C69B92E12A2E757B00252729 /* DataStore.swift */,
+				C69B92E32A2E75B900252729 /* Person.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
