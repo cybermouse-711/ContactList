@@ -11,15 +11,11 @@ class ContactListViewController: UITableViewController {
     
     private var personList = Person.getPerson()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let infoPersonVC = segue.destination as? InfoContactViewController else { return }
-        infoPersonVC.person = sender as? Person
+        let infoPersonVC = segue.destination as? InfoContactViewController
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        infoPersonVC?.person = personList[indexPath.row]
     }
 
     // MARK: - Table view data source
@@ -28,13 +24,11 @@ class ContactListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        let person = personList[indexPath.row]
+        content.text = person.fullName
+        cell.contentConfiguration = content
         return cell
     }
-    
-
-
 }
