@@ -9,22 +9,22 @@ private var dataStore: DataStore!
 
 struct Person {
     
-    let name: Set<String>
-    let surname: Set<String>
-    let number: Set<String>
-    let email: Set<String>
+    let name: String
+    let surname: String
+    let number: String
+    let email: String
     
-    var fullname: String {
+    var fullName: String {
         "\(name) \(surname)"
     }
     
     static func getPerson() -> [Person] {
         [
             Person(
-                name: dataStore.name,
-                surname: dataStore.surname,
-                number: dataStore.number,
-                email: dataStore.email
+                name: dataStore.name.randomElement() ?? "not name",
+                surname: dataStore.surname.randomElement() ?? "not surname",
+                number: dataStore.number.randomElement() ?? "not number",
+                email: dataStore.email.randomElement() ?? "not email"
             )
         ]
     }
