@@ -7,10 +7,15 @@
 
 import UIKit
 
-class ContactListViewController: UITableViewController {
+final class ContactListViewController: UITableViewController {
     
-    private var personList = Person.getPerson()
-
+   private var personList = Person.getPersons()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Contacts List"
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let infoPersonVC = segue.destination as? InfoContactViewController
